@@ -10,6 +10,14 @@ pipeline{
              sh 'mvn --version'
          }
          }
+
+        stage('checkout')
+        {
+         steps{
+
+          git 'https://github.com/vanajay/spring-petclinic.git'
+        }
+       }
        }
 
 }
