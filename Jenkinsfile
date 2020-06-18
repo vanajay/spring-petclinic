@@ -15,7 +15,7 @@ pipeline{
         {
          steps{
 
-          git url: 'https://github.com/vanajay/spring-petclinic.git'
+          git  'https://github.com/vanajay/spring-petclinic.git'
         }
        }
        }

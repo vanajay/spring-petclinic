@@ -1,9 +1,10 @@
 echo 'Hello world'
 echo -n 'this is wonderful'
 
-pi=3.14
+pi=3
 v1=10
 v2=$v1
 v3=$v2
-
-echo "This is a wonderful day" "$v1"$v2,$v3 
+if [ $pi -gt 0 ]; then
+	echo "the value is greater"
+fi	
