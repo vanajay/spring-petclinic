@@ -1,19 +1,15 @@
 pipeline{
-agent { docker 'maven:3.6.3-jdk-11' }
-    stages{
-      stage('Checkout'){ 
-      steps{
-         git 'https://github.com/vanajay/spring-petclinic.git'
-      }
-    }
-     stage('Build'){
-      steps{
-          sh 'mvn clean package'
-          junit '**/target/surefire-reports/Test-*.xml'
-      }
-
-     }
-}
-       
+       agent any
+       stages{
+         stage('Éxample Build')
+         {
+          agent{
+          docker 'maven:3.5-alpine'
+          }
+         steps{
+             sh 'mvn --version'
+         }
+         }
+       }
 
 }
